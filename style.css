@@ -2139,3 +2139,8 @@ body {
         font-size: 0.85rem;
     }
 }
+
+
+p{
+    text-align: justify;
+}
