@@ -1,3 +1,16 @@
+// Hamburger toggle for mobile menu
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active'); // Optional: animate the icon
+            navMenu.classList.toggle('active');
+        });
+    }
+});
+
 // Scroll Animation for About Section
 const observerOptions = {
     threshold: 0.2,
@@ -126,41 +139,6 @@ function handleSwipe() {
 }
 
 // Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const formData = {
-            firstName: document.getElementById('firstName').value,
-            lastName: document.getElementById('lastName').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-        
-        // Basic validation
-        if (!formData.firstName || !formData.lastName || !formData.subject || !formData.message) {
-            showNotification('Please fill in all fields', 'error');
-            return;
-        }
-        
-        // Show loading state
-        const submitBtn = contactForm.querySelector('.submit-btn');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitBtn.disabled = true;
-        
-        // Simulate form submission (replace with actual API call)
-        setTimeout(() => {
-            showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
-            contactForm.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    });
-}
 
 // Notification function
 function showNotification(message, type) {
