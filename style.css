@@ -51,7 +51,7 @@ body {
 }
 
 .nav-logo .logo {
-    height: 70px;
+    height: 90px;
     width: auto;
     border-radius: 8px;
 }
@@ -111,7 +111,7 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-top: 70px
+    margin-top: 90px
 }
 
 .hero-background {
@@ -343,7 +343,7 @@ body {
     }
     
     .hero{
-        margin-top: 60px;
+        margin-top: 75px;
     }
 
     .hero-title {
